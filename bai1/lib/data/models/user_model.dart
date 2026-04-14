@@ -30,7 +30,6 @@ class UserModel {
     );
   }
 
-  /// Lấy chữ cái đầu tên để hiển thị avatar
   String get initials => name.isNotEmpty ? name[0].toUpperCase() : '?';
 }
 

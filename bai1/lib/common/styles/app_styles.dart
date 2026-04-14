@@ -2,8 +2,7 @@
 import 'package:flutter/material.dart';
 
 class AppStyles {
-  // ── Colors ──────────────────────────────────────────────
-  static const Color primary    = Color(0xFF3F51B5); // indigo
+  static const Color primary    = Color(0xFF3F51B5);
   static const Color accent     = Color(0xFF5C6BC0);
   static const Color background = Color(0xFFF5F5F5);
   static const Color cardBg     = Colors.white;
@@ -11,7 +10,6 @@ class AppStyles {
   static const Color textSecondary = Color(0xFF757575);
   static const Color error      = Color(0xFFE53935);
 
-  // ── TextStyles ──────────────────────────────────────────
   static const TextStyle titleLarge = TextStyle(
     fontSize: 18, fontWeight: FontWeight.bold, color: textPrimary,
   );
@@ -22,7 +20,6 @@ class AppStyles {
     fontSize: 11, color: textSecondary,
   );
 
-  // ── Theme ───────────────────────────────────────────────
   static ThemeData get theme => ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(seedColor: primary),
@@ -39,7 +36,6 @@ class AppStyles {
     ),
   );
 
-  // ── Spacing ─────────────────────────────────────────────
   static const double paddingS  = 8.0;
   static const double paddingM  = 16.0;
   static const double paddingL  = 24.0;

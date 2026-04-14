@@ -8,7 +8,6 @@ class UserRepository {
   UserRepository({UserApiService? apiService})
       : _apiService = apiService ?? UserApiService();
 
-  /// Fetch và parse danh sách user
   Future<List<UserModel>> fetchUsers() async {
     try {
       final jsonList = await _apiService.getUsers();

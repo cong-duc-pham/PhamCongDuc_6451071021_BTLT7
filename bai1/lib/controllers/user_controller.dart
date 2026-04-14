@@ -1,6 +1,3 @@
-// ============================================================
-// controllers/user_controller.dart
-// ============================================================
 
 import 'package:flutter/material.dart';
 import '../data/models/user_model.dart';
@@ -15,22 +12,18 @@ class UserController extends ChangeNotifier {
   UserController({UserRepository? repository})
       : _repository = repository ?? UserRepository();
 
-  // ── State ────────────────────────────────────────────────
   UserState _state = UserState.initial;
   List<UserModel> _users = [];
   List<UserModel> _filtered = [];
   String _errorMessage = '';
   String _searchQuery = '';
 
-  // ── Getters ──────────────────────────────────────────────
   UserState get state => _state;
   List<UserModel> get users => _filtered;
   String get errorMessage => _errorMessage;
   bool get isLoading => _state == UserState.loading;
 
-  // ── Actions ──────────────────────────────────────────────
 
-  /// Gọi API lấy danh sách user
   Future<void> loadUsers() async {
     _state = UserState.loading;
     notifyListeners();
@@ -49,7 +42,6 @@ class UserController extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Tìm kiếm theo tên hoặc email
   void search(String query) {
     _searchQuery = query.toLowerCase();
     _applyFilter();

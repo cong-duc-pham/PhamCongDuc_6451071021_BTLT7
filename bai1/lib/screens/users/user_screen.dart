@@ -55,7 +55,6 @@ class _UserScreenState extends State<UserScreen> {
 
       body: Column(
         children: [
-          // ── Search bar ─────────────────────────────────
           Container(
             color: Colors.white,
             padding: const EdgeInsets.all(AppStyles.paddingM),
@@ -94,7 +93,6 @@ class _UserScreenState extends State<UserScreen> {
             ),
           ),
 
-          // ── User table ─────────────────────────────────
           Expanded(
             child: UserTable(controller: _controller),
           ),

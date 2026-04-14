@@ -4,7 +4,6 @@ import '../../utils/constants.dart';
 import '../../utils/logger.dart';
 
 class UserApiService {
-  /// GET /users → raw JSON list
   Future<List<dynamic>> getUsers() async {
     final url = Uri.parse('${AppConstants.baseUrl}${AppConstants.usersEndpoint}');
     AppLogger.info('GET $url');
